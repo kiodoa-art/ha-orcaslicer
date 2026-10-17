@@ -1,0 +1,26 @@
+name: "OrcaSlicer Web"
+version: "0.2.0"
+slug: "orcaslicer"
+description: "OrcaSlicer via Home Assistant Ingress (eksperimentel)"
+url: "https://github.com/kiodoa-art/ha-orcaslicer"
+arch:
+  - amd64
+startup: application
+boot: manual
+init: false
+legacy: true
+stage: experimental
+ingress: true
+ingress_port: 3000
+ingress_stream: true
+panel_icon: "mdi:printer-3d"
+panel_title: "OrcaSlicer"
+ports: {}
+map:
+  - type: addon_config
+    read_only: false
+    path: /config
+environment:
+  PUID: "1000"
+  PGID: "1000"
+  TZ: "Europe/Copenhagen"
